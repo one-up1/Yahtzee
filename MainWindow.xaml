@@ -6,14 +6,15 @@
         mc:Ignorable="d"
         Width="800"
         Height="450"
-        Title="MainWindow" >
+        WindowStartupLocation="CenterScreen"
+        Title="Yahtzee">
 
     <Grid>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="60" />
             <RowDefinition />
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="50" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -22,48 +23,54 @@
         </Grid.ColumnDefinitions>
 
         <Label
+            Name="label"
             Grid.Row="0"
             HorizontalContentAlignment="Center"
             VerticalContentAlignment="Center"
             FontWeight="Bold"
-            Content="Druk op 'Dobbelstenen Gooien'" />
+            Content="Klik op 'Dobbelstenen Gooien'" />
 
         <StackPanel
             Name="spDice"
             Grid.Row="1"
+            Width="340"
+            Height="60"
             Orientation="Horizontal">
 
             <Image
-                Width="60"
-                Height="60" />
+                Margin="4"
+                MouseDown="Dice_MouseDown" />
 
             <Image
-                Width="60"
-                Height="60" />
+                Margin="4"
+                MouseDown="Dice_MouseDown" />
 
             <Image
-                Width="60"
-                Height="60" />
+                Margin="4"
+                MouseDown="Dice_MouseDown" />
 
             <Image
-                Width="60"
-                Height="60" />
+                Margin="4"
+                MouseDown="Dice_MouseDown" />
 
             <Image
-                Width="60"
-                Height="60" />
+                Margin="4"
+                MouseDown="Dice_MouseDown" />
 
         </StackPanel>
-        
+
         <Button
+            Name="bThrowDice"
             Grid.Row="2"
-            Margin="6"
-            Content="RollDice"
+            Width="160"
+            Margin="8"
+            Content="Dobbelstenen Gooien"
             Click="RollDice_Click" />
 
         <Grid
             Grid.Column="1"
-            Grid.RowSpan="3">
+            Grid.RowSpan="3"
+            Margin="4">
 
             <Grid.RowDefinitions>
                 <RowDefinition />
@@ -92,32 +99,92 @@
             <Label
                 Grid.Row="0"
                 Grid.Column="0"
-                Content="Eenen" />
+                BorderThickness="1"
+                BorderBrush="Black"
+                Content="Éénen" />
 
             <Label
                 Name="lOnes"
                 Grid.Row="0"
-                Grid.Column="1" />
+                Grid.Column="1"
+                BorderThickness="0 1 1 1"
+                BorderBrush="Black"
+                MouseDown="lOnes_MouseDown" />
 
             <Label
                 Grid.Row="1"
                 Grid.Column="0"
-                Content="Tweeen" />
+                BorderThickness="1 0 1 1"
+                BorderBrush="Black"
+                Content="Tweeën" />
 
             <Label
-                Name="lTwoos"
+                Name="lTwos"
                 Grid.Row="1"
-                Grid.Column="1" />
+                Grid.Column="1"
+                BorderThickness="0 0 1 1"
+                BorderBrush="Black"
+                MouseDown="lTwos_MouseDown" />
 
             <Label
                 Grid.Row="2"
                 Grid.Column="0"
-                Content="Three of a kind" />
+                BorderThickness="1 0 1 1"
+                BorderBrush="Black"
+                Content="Drieën" />
 
             <Label
-                Name="lThress"
+                Name="lThrees"
                 Grid.Row="2"
-                Grid.Column="1" />
+                Grid.Column="1"
+                BorderThickness="0 0 1 1"
+                BorderBrush="Black"
+                MouseDown="lThrees_MouseDown" />
+
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                BorderThickness="1 0 1 1"
+                BorderBrush="Black"
+                Content="Vieren" />
+
+            <Label
+                Name="lFours"
+                Grid.Row="3"
+                Grid.Column="1"
+                BorderThickness="0 0 1 1"
+                BorderBrush="Black"
+                MouseDown="lFours_MouseDown" />
+
+            <Label
+                Grid.Row="4"
+                Grid.Column="0"
+                BorderThickness="1 0 1 1"
+                BorderBrush="Black"
+                Content="Fijven" />
+
+            <Label
+                Name="lFives"
+                Grid.Row="4"
+                Grid.Column="1"
+                BorderThickness="0 0 1 1"
+                BorderBrush="Black"
+                MouseDown="lFives_MouseDown" />
+
+            <Label
+                Grid.Row="5"
+                Grid.Column="0"
+                BorderThickness="1 0 1 1"
+                BorderBrush="Black"
+                Content="Zessen" />
+
+            <Label
+                Name="lSixes"
+                Grid.Row="5"
+                Grid.Column="1"
+                BorderThickness="0 0 1 1"
+                BorderBrush="Black"
+                MouseDown="lSixes_MouseDown" />
 
         </Grid>
 
