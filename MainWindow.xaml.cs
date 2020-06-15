@@ -27,7 +27,7 @@ namespace Yahtzee
             img.Source = dice[2];
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void RollDice_Click(object sender, RoutedEventArgs e)
         {
             foreach (Image image in spDice.Children)
             {

@@ -11,15 +11,22 @@
     <Grid>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="60" />
             <RowDefinition />
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
-        <Button
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Label
             Grid.Row="0"
-            Content="Test"
-            Click="Button_Click" />
-        
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            FontWeight="Bold"
+            Content="Druk op 'Dobbelstenen Gooien'" />
 
         <StackPanel
             Name="spDice"
@@ -47,6 +54,72 @@
                 Height="60" />
 
         </StackPanel>
+        
+        <Button
+            Grid.Row="2"
+            Margin="6"
+            Content="RollDice"
+            Click="RollDice_Click" />
+
+        <Grid
+            Grid.Column="1"
+            Grid.RowSpan="3">
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="60" />
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Content="Eenen" />
+
+            <Label
+                Name="lOnes"
+                Grid.Row="0"
+                Grid.Column="1" />
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Content="Tweeen" />
+
+            <Label
+                Name="lTwoos"
+                Grid.Row="1"
+                Grid.Column="1" />
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Content="Three of a kind" />
+
+            <Label
+                Name="lThress"
+                Grid.Row="2"
+                Grid.Column="1" />
+
+        </Grid>
 
     </Grid>
     
